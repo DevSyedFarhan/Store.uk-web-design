@@ -1,0 +1,304 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    user-select: none;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+#main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#left{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+#left #nav{
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+#nav h4{
+    font-size: 15px;
+}
+
+#nav a{
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+    font-size: 15px;
+}
+#nav  i {
+    display: none;
+}
+
+#nav a:hover{
+    border-bottom: 2px solid black;
+    transition: all 0.3s ease;
+}
+
+#txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#left #bottom-section{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    left: 40px;
+    font-size: 30px;
+}
+
+#bottom-section #box {
+    width: 200px;
+    height: 40px;
+    background-color: black; 
+    color: white; 
+    border-radius: 5px; 
+    display: none;
+}
+#bottom-section i:hover ~ #box {
+    display: initial;
+}
+#bottom-section h3{
+    text-align: center;
+    font-size: 12px;
+    padding: 12px;
+}
+
+#txt h1{
+    font-size: 80px;
+    margin-bottom: -10px;
+}
+
+#bottom-section i {
+    font-size: 40px;
+    
+}
+
+#bottom-section i:hover{
+    transform: scale(1.1);
+    transition: 0.1s linear;
+    animation: rotate;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: initial;
+    
+}
+#txt p{
+    font-size: 12px;
+    opacity: .6;
+    font-weight: 600;
+}
+#txt a{
+    position: absolute;
+    margin-top: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    color: black;
+}
+#right{
+    width: 50%;
+    height: 100%;
+    background-color: darkblue;
+}
+
+#r-top{
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+
+#r-bottom{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.747), transparent), url(https://images.unsplash.com/photo-1639126492973-9b3b0ea33d91?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D    );
+    background-position: center;
+    background-size: cover;
+    border-image: fill 0 linear-gradient #0003, #000;
+}
+
+#top-l{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-image:url(https://plus.unsplash.com/premium_photo-1671119151615-7739e1dcc738?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+
+#top-l h5{
+    position: absolute;
+    line-height: 1;
+    font-size: 5vw;
+    color: white;
+    top: 30%;
+    left: 7%;
+}
+#top-l:hover{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.747),transparent), url(https://plus.unsplash.com/premium_photo-1671119151615-7739e1dcc738?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
+}
+#top-r{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-image:url(https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    border-image: fill 0 linear-gradient #0003, #000;
+}
+
+#top-r:hover{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.849),transparent),url(https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
+}
+
+#top-r h5{
+    position: absolute;
+    line-height: 1;
+    font-size: 5vw;
+    color: white;
+    top: 30%;
+    left: 7%;
+}
+#top-l, #top-r {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#top-l:hover, #top-r:hover {
+    transform: scale(1.05);
+    filter: brightness(0.8); /* Reduce brightness on hover */
+}
+#r-bottom h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6vh;
+    line-height: 1;
+    color: white;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(30deg);
+    }
+    40%{
+        transform: rotate(45deg);
+    }
+    60%{
+        transform: rotate(60deg);
+    }
+    80%{
+        transform: rotate(75deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 500px){
+    #main{
+        height: 225%;
+        flex-direction: column;
+    }
+    #left{  
+        width: 100%;
+        height: 75%;
+    }
+    #nav a{
+        display: none;
+    }
+    #nav i{
+        margin-right: 10px;
+        display: initial;
+        font-size: 20px;
+    }
+    
+    #box{
+        display: none;
+    }
+    #right{
+        position: relative;
+        width: 100%;
+        height: 150%;
+    }
+    #r-bottom h1{
+        font-size:70px;
+    }
+    #r-top{
+        height: 75%;
+        flex-direction: column;
+    }
+    #top-l{
+        height: 50%;
+        width: 100%;
+    }
+    #top-r{
+        height: 50%;
+        width: 100%;
+    }
+    #r-bottom{
+        height: 75%;
+    }
+}
+
+@media (max-width: 768px){
+    #main{
+        flex-direction: column;
+    }
+    #left{  
+        width: 100%;
+        height: 150%;
+    }
+    #nav a{
+        display: none;
+    }
+    #nav i{
+        margin-right: 10px;
+        display: initial;
+        font-size: 20px;
+    }
+    #right{
+        width: 100%;
+        height: 150%;
+    }
+    #r-top{
+        height: 75%;
+    }
+    #r-bottom{
+        height: 75%;
+    }
+    #top-l h5{
+        font-size: 40px;
+    }
+    #top-r h5{
+        font-size: 40px;
+    }
+}
